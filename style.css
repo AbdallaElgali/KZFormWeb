@@ -16,9 +16,9 @@ body {
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    width: 80%;
+    width: 90%;
     max-width: 800px;
-    margin: 30px auto;
+    margin: 10px auto;
     border: 2px solid #0080801a;
     transition: transform 0.3s ease-in-out;
 }
