@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Successful</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .success-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid #0080801a;
+        }
+        h1 {
+            color: #008080;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .success-icon {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+        .success-icon::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 45px;
+            border-right: 8px solid #008080; /* Thicker tick */
+            border-bottom: 8px solid #008080;
+            border-radius: 4px; /* Rounded edges */
+            transform: rotate(45deg);
+            top: 10px;
+            left: 25px;
+            opacity: 0;
+            animation: draw-tick 0.5s ease forwards 0.3s; /* Animation delay of 0.3s */
+        }
+        @keyframes draw-tick {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+            50% {
+                width: 20px;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                width: 20px;
+                height: 45px;
+                opacity: 1;
+            }
+        }
+        .back-home-btn {
+            background-color: #008080;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .back-home-btn:hover {
+            background-color: #006666;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon"></div>
+        <h1>Submission Successful!</h1>
+        <p>Your form has been submitted successfully. Thank you for providing the information.</p>
+        <a href="index.html" class="back-home-btn">Go Back to Home</a>
+    </div>
+</body>
+</html>

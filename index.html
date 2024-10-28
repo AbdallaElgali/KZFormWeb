@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Information Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Loading overlay styles */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner-border text-primary" role="status" style="color: #008080;">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>KhairZayed Store Information</h2>
+        <form id="storeForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="storeEmail">E-mail | البريد إلكتروني</label>
+                <input type="text" class="form-control" id="storeEmail" name="storeEmail" required>
+                <div class="invalid-feedback"></div> <!-- For error message -->
+            </div>
+            <div class="form-group">
+                <label for="storeNameEnglish">Store Name English | اسم المتجر بالانجليزية</label>
+                <input type="text" class="form-control" id="storeNameEnglish" name="storeNameEnglish" required>
+            </div>
+            <div class="form-group">
+                <label for="storeNameArabic">Store Name Arabic: | اسم المتجر بالعربي</label>
+                <input type="text" class="form-control" id="storeNameArabic" name="storeNameArabic" required>
+            </div>
+            <div class="form-group">
+                <label for="storeLogo">Store Logo | شعار المتجر</label>
+                <input type="file" class="form-control-file" id="storeLogo" name="storeLogo" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="storeBackground">Store Background Image | صورة خلفية المتجر</label>
+                <input type="file" class="form-control-file" id="storeBackground" name="storeBackground" accept="image/*" required>
+            </div>
+            <div id="branchesContainer"></div>
+            <button type="button" class="add-branch-btn btn btn-outline-primary mt-3" onclick="addBranch()">Add Branch</button>
+            <input type="submit" class="btn btn-primary mt-4" value="Submit">
+        </form>
+    </div>
+
+    <!-- Include the external JavaScript file -->
+    <script src="script.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
