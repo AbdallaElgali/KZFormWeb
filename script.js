@@ -45,7 +45,7 @@ function updateBranchIds() {
 }
 
 function validateGoogleMapsUrl(inputElement) {
-    const googleMapsRegex = /^https?:\/\/(www\.)?(google\.[a-z]{2,3}(\.[a-z]{2})?\/maps\/.+|maps\.app\.goo\.gl\/[a-zA-Z0-9]+)$/;
+    const googleMapsRegex = /^https?:\/\/(www\.)?(google\.[a-z]{2,3}(\.[a-z]{2})?\/maps\/.+|maps\.app\.goo\.gl\/[a-zA-Z0-9]+(\?.*)?)$/;
     const isValid = googleMapsRegex.test(inputElement.value);
 
     if (isValid) {
@@ -58,6 +58,7 @@ function validateGoogleMapsUrl(inputElement) {
         inputElement.nextElementSibling.textContent = "Please enter a valid Google Maps URL.";
     }
 }
+
 
 function validateEmail(inputElement) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
